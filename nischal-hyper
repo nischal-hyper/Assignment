@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+#define STUDENTS 3
+
+int main() {
+    int i, sum = 0;
+    int scores[STUDENTS];
+    float average;
+
+    // Input grades
+    for (i = 0; i < STUDENTS; i++) {
+        printf("Enter student #%d's grade: ", i + 1);
+        scanf("%d", &scores[i]);
+    }
+
+    // Calculate sum
+    for (i = 0; i < STUDENTS; i++) {
+        sum += scores[i];
+    }
+
+    // Calculate average
+    average = (float)sum / STUDENTS;
+
+    // Output average
+    printf("Grade average = %.2f\n", average);
+
+    return 0;
+}
